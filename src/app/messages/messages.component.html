@@ -1,0 +1,32 @@
+<div class="container">
+  <button class="logout-btn" (click)="onLogout()">Logout</button>
+  <div class="form-section">
+    <h2>New Message</h2>
+    <form [formGroup]="messageForm" (ngSubmit)="onSubmit()">
+      <label>
+        Phone Number:
+        <input formControlName="phone" type="text" placeholder="+18777804236" />
+      </label>
+      <label>
+        Message:
+        <textarea formControlName="message" rows="4" placeholder="Type your message"></textarea>
+      </label>
+      <div class="buttons">
+        <button type="submit" [disabled]="messageForm.invalid">Submit</button>
+        <button type="button" (click)="onClear()">Clear</button>
+      </div>
+    </form>
+  </div>
+  <div class="messages-section">
+    <h2>Message History</h2>
+    <div class="messages-list">
+      <div *ngFor="let msg of messages; let i = index" class="message-item">
+        <div><strong>To:</strong> {{ msg.phone }}</div>
+        <div><strong>Message:</strong> {{ msg.message }}</div>
+        <div class="timestamp">{{ msg.timestamp | date:'short' }}</div>
+        <p *ngIf="i === lastDeliveredIndex && !deliveredStatus" style="color: gray; margin-top: 0.5em;">Sent</p>
+        <p *ngIf="i === lastDeliveredIndex && deliveredStatus" style="color: green; margin-top: 0.5em;">Delivered</p>
+      </div>
+    </div>
+  </div>
+</div>

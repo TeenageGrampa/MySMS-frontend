@@ -1,0 +1,85 @@
+.container {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.form-section {
+  flex: 1;
+  max-width: 350px;
+  background: #f9f9f9;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.form-section h2 {
+  margin-top: 0;
+}
+
+.form-section label {
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.form-section input,
+.form-section textarea {
+  width: 100%;
+  margin-top: 0.25rem;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.error {
+  color: #d32f2f;
+  font-size: 0.9em;
+  margin-bottom: 0.5rem;
+}
+
+.messages-section {
+  flex: 2;
+  max-height: 850px;
+  background: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+.messages-list {
+  display: flex;
+  flex-direction: column-reverse;
+  overflow-y: scroll;
+  gap: 1rem;
+  height: 760px;
+}
+
+.message-item {
+  padding: 0.75rem;
+  border-bottom: 1px solid #eee;
+}
+
+.timestamp {
+  font-size: 0.85em;
+  color: #888;
+  margin-top: 0.25rem;
+}
+
+.logout-btn {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  background: #e53935;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1.2rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  z-index: 10;
+}

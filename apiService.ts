@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ApiService {
-  private apiUrl = 'http://127.0.0.1:3000'; // Replace with your API base URL
+  private apiUrl = 'https://mysms-api-7064b9d8fda0.herokuapp.com';
 
   constructor(private http: HttpClient) { }
 

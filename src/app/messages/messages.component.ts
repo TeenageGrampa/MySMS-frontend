@@ -58,7 +58,7 @@ export class MessagesComponent {
       }
     });
     this.statusSubscription = this.webSocketService
-      .connectAndSubscribe('https://9275fcbfd426.ngrok-free.app/cable', 'MessageStatusChannel')
+      .connectAndSubscribe('https://mysms-api-7064b9d8fda0.herokuapp.com/cable', 'MessageStatusChannel')
       .subscribe((message: any) => {
         if(message.identifier === "{\"channel\":\"MessageStatusChannel\"}"){
           console.log('Received WebSocket message:', JSON.parse(message.message));

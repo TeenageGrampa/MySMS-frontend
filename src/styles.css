@@ -1,1 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
+.my-sms-title {
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+  font-weight: bold;
+}

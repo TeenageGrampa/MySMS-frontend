@@ -62,7 +62,10 @@ export class MessagesComponent {
       .subscribe((message: any) => {
         if(message.identifier === "{\"channel\":\"MessageStatusChannel\"}"){
           console.log('Received WebSocket message:', JSON.parse(message.message));
-          this.deliveredStatus = true;
+          const statusData = JSON.parse(message.message);
+          if (statusData.status === 'delivered') {
+            this.deliveredStatus = true;
+          }
         }
       });
   }
